@@ -1,148 +1,59 @@
+
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Zee Liu</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-        <!-- <link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERERERERERERERERERERERAAAAAAEREREAAAAAAREREQABERERERERAAEREREREREAAAAAEREREQAAAAARERERAAEREREREREAAREREREREQAAAAABERERAAAAAAEREREREREREREREREREREREREREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" type="image/x-icon"> -->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700' rel='stylesheet' type='text/css'>
-        <style>
-            html, body {
-                overflow: hidden;
-                margin: 0;
-            }
-            body {
-                font-family: 'Open Sans', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
-                color: #333;
-            }
-            #wrapper {
-                position: absolute;
-                left: 0;
-                width: 320px;
-                text-align: center;
-                top: 50%;
-                left: 50%;
-                margin-left: -160px;
-                margin-top: -160px;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                user-select: none;
-            }
-            h1 {
-                font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-                font-weight: 700;
-                font-size: 30px;
-                letter-spacing: 9px;
-                text-transform: uppercase;
-                margin: 12px 0;
-                left: 4px;
-            }
-            h2 {
-                color: #999;
-                font-weight: normal;
-                font-size: 15px;
-                letter-spacing: .12em;
-                margin-bottom: 30px;
-                left: 3px;
-            }
-            h1, h2 {
-                position: relative;
-            }
-            p {
-                font-size: 14px;
-                line-height: 2em;
-                margin: 0;
-                letter-spacing: 2px;
-            }
-            canvas {
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 0;
-                width: 100%;
-                height: 100%;
-                pointer-events: none;
-            }
-            a {
-                color: #999;
-                text-decoration: none;
-                transition: color .2s ease;
-            }
-            a:hover {
-                color: #f33;
-            }
-        </style>
-        <script type="text/javascript">
+<html lang="en">
 
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-38965494-1']);
-          _gaq.push(['_setDomainName', 'evanyou.me']);
-          _gaq.push(['_trackPageview']);
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
+<body>
+    <div class="box">
+        <div style="font-weight: 100;">FontWeight100: ABCD123,456789</div>
+        <div style="font-weight: 200;">FontWeight200: ABCD123,456789</div>
+        <div style="font-weight: 300;">FontWeight300: ABCD123,456789</div>
+        <div style="font-weight: 400;">FontWeight400: ABCD123,456789</div>
+        <div style="font-weight: 500;">FontWeight500: ABCD123,456789</div>
+        <div style="font-weight: 600;">FontWeight600: ABCD123,456789</div>
+        <div style="font-weight: 700;">FontWeight700: ABCD123,456789</div>
+        <div style="font-weight: 800;">FontWeight800: ABCD123,456789</div>
+        <div style="font-weight: 900;">FontWeight900: ABCD123,456789</div>
 
-        </script>
-    </head>
-    <body>
-        <div id="wrapper">
-            <h1>ZEE LIU</h1>
-            <h2>努力学习，用心感受前端与设计！</h2>
-            <p><a href="https://www.jianshu.com/u/acb9cf89fa0f" target="_blank">简书</a></p>
-            <p><a href="https://github.com/funny-man" target="_blank">Github</a></p>
-            <p><a href="https://github.com/funny-man/Z-Resume" target="_blank">简历</a></p>
+        <div style="font-weight: 100; margin-top: 24px;">字重100：欢迎使用问卷星</div>
+        <div style="font-weight: 200;">字重200：欢迎使用问卷星</div>
+        <div style="font-weight: 300;">字重300：欢迎使用问卷星</div>
+        <div style="font-weight: 400;">字重400：欢迎使用问卷星</div>
+        <div style="font-weight: 500;">字重500：欢迎使用问卷星</div>
+        <div style="font-weight: 600;">字重600：欢迎使用问卷星</div>
+        <div style="font-weight: 700;">字重700：欢迎使用问卷星</div>
+        <div style="font-weight: 800;">字重800：欢迎使用问卷星</div>
+        <div style="font-weight: 900;">字重900：欢迎使用问卷星</div>
 
-        </div>
-        <canvas></canvas>
-        <script>
-            document.addEventListener('touchmove', function (e) {
-                e.preventDefault()
-            })
-            var c = document.getElementsByTagName('canvas')[0],
-                x = c.getContext('2d'),
-                pr = window.devicePixelRatio || 1,
-                w = window.innerWidth,
-                h = window.innerHeight,
-                f = 90,
-                q,
-                m = Math,
-                r = 0,
-                u = m.PI*2,
-                v = m.cos,
-                z = m.random
-            c.width = w*pr
-            c.height = h*pr
-            x.scale(pr, pr)
-            x.globalAlpha = 0.6
-            function i(){
-                x.clearRect(0,0,w,h)
-                q=[{x:0,y:h*.7+f},{x:0,y:h*.7-f}]
-                while(q[1].x<w+f) d(q[0], q[1])
-            }
-            function d(i,j){   
-                x.beginPath()
-                x.moveTo(i.x, i.y)
-                x.lineTo(j.x, j.y)
-                var k = j.x + (z()*2-0.25)*f,
-                    n = y(j.y)
-                x.lineTo(k, n)
-                x.closePath()
-                r-=u/-50
-                x.fillStyle = '#'+(v(r)*127+128<<16 | v(r+u/3)*127+128<<8 | v(r+u/3*2)*127+128).toString(16)
-                x.fill()
-                q[0] = q[1]
-                q[1] = {x:k,y:n}
-            }
-            function y(p){
-                var t = p + (z()*2-1.1)*f
-                return (t>h||t<0) ? y(p) : t
-            }
-            document.onclick = i
-            document.ontouchstart = i
-            i()
-        </script>
-    </body>
+    </div>
+
+</body>
+
 </html>
+<style>
+    html {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+        ;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        margin: 0 auto;
+        padding: 0;
+        margin: 40px;
+
+    }
+    .box>div{
+        margin-top: 8px;
+    }
+</style>
